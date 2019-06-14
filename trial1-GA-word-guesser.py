@@ -20,7 +20,7 @@ def get_fitness(guess):
 def mutate(parent):
     index = random.randrange(0, len(parent))
     childGenes = list(parent)
-    newGene, alternate = random.sample(geneSet, 2)
+    newGene,alternate = random.sample(geneSet, 2)
      
     if(newGene == childGenes[index]):
         childGenes[index] = alternate
