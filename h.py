@@ -10,7 +10,7 @@ def generate_parent(length):
     while len(genes) < length:
         sampleSize = min(length - len(genes), len(geneSet))
         genes.extend(random.sample(geneSet, sampleSize))
-    return ''.join(genes)
+    return genes
 
 
 def get_fitness(guess):
@@ -27,7 +27,7 @@ def mutate(parent):
         childGenes[index] = alternate
     else:
          newGene
-    return ''.join(childGenes)
+    return childGenes
 
 def display(guess):
     timeDiff = datetime.datetime.now() - startTime
